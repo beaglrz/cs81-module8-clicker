@@ -39,3 +39,40 @@ Repo: https://github.com/beaglrz/cs81-module8-clicker-->
   <p id="message" style="font-size: 1.2rem;">
     Start clicking to collect bows for Hello Kitty!
   </p>
+
+  <script>
+    // Select the elements from the page (DOM)
+    const kittyButton = document.getElementById("kittyButton");
+    const counterDisplay = document.getElementById("counter");
+    const messageDisplay = document.getElementById("message");
+    const page = document.getElementById("page");
+
+    // This variable keeps track of how many times the button has been clicked
+    let clicks = 0;
+
+    // Listen for clicks on the button
+    kittyButton.addEventListener("click", function () {
+      // Increase the click counter by 1
+      clicks++;
+
+      // Update the number shown on the page
+      counterDisplay.textContent = clicks;
+
+      // Milestone messages (using if / else if)
+      if (clicks === 10) {
+        messageDisplay.textContent = "You’re just getting started! 🎀";
+        page.style.background = "#ffe6f2";
+      } else if (clicks === 25) {
+        messageDisplay.textContent = "Wow, that’s a lot of bows! 🌸";
+        page.style.background = "#fff5cc";
+      } else if (clicks === 50) {
+        messageDisplay.textContent = "Are you still clicking? 🤯";
+        page.style.background = "#e6f7ff";
+      } else if (clicks === 100) {
+        messageDisplay.textContent = "You win! Now you deserve a break 💖";
+        page.style.background = "#e9ffe6";
+      }
+    });
+  </script>
+</body>
+</html>
