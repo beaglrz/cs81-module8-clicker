@@ -1,2 +1,41 @@
 <!--Beatriz Galarza
 Repo: https://github.com/beaglrz/cs81-module8-clicker-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello Kitty Clicker</title>
+</head>
+
+<body id="page" style="font-family: monospace; text-align: center; margin-top: 80px; background: #fff0f6;">
+  <h1 style="font-size: 2.2rem;">🎀 Hello Kitty Clicker 🎀</h1>
+  <p style="margin-top: -10px;">Click to collect bows!</p>
+
+  <!-- Button the user clicks -->
+<button
+  id="kittyButton"
+  style="
+    font-size: 1.3rem;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid #f966af;
+    background: #ffffff;
+    box-shadow: 0 6px 0 #ff69b4;
+    transition: all 0.1s ease;
+  "
+>
+  🎀🎀🎀 
+</button>
+
+  <!-- Counter display -->
+  <p style="font-size: 1.5rem; margin-top: 24px;">
+    Bows collected: <span id="counter">0</span>
+  </p>
+
+  <!-- Message display area -->
+  <p id="message" style="font-size: 1.2rem;">
+    Start clicking to collect bows for Hello Kitty!
+  </p>
